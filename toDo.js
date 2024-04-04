@@ -6,6 +6,8 @@ addItem.addEventListener('click', addItems);
 
 function addItems() {
     const newItem = display.value.trim();
+    if(display.value.trim() === ''){}
+    else{
         const li = document.createElement('li');
         li.textContent = newItem;
         li.innerHTML=`${newItem}
@@ -13,7 +15,7 @@ function addItems() {
         border-radius:3px;">Delete</button>`;
         itemList.appendChild(li);
         display.value = '';
-
+    }
         
 }
 function deleteItem (newItem){
